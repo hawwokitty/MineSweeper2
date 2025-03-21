@@ -1,0 +1,16 @@
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\bin\Debug\net9.0-windows\MineSweeper2.exe
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\bin\Debug\net9.0-windows\MineSweeper2.deps.json
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\bin\Debug\net9.0-windows\MineSweeper2.runtimeconfig.json
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\bin\Debug\net9.0-windows\MineSweeper2.dll
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\bin\Debug\net9.0-windows\MineSweeper2.pdb
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.Form1.resources
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.csproj.GenerateResource.cache
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.GeneratedMSBuildEditorConfig.editorconfig
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.AssemblyInfoInputs.cache
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.AssemblyInfo.cs
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.csproj.CoreCompileInputs.cache
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.dll
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\refint\MineSweeper2.dll
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.pdb
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.genruntimeconfig.cache
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\ref\MineSweeper2.dll

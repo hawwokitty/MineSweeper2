@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB094C2-16E8-4B09-8A75-E95CD0996C74}|MineSweeper2\\MineSweeper2.csproj|d:\\get_stuff\\minesweeperproject\\minesweeper2\\minesweeper2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB094C2-16E8-4B09-8A75-E95CD0996C74}|MineSweeper2\\MineSweeper2.csproj|solutionrelative:minesweeper2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB094C2-16E8-4B09-8A75-E95CD0996C74}|MineSweeper2\\MineSweeper2.csproj|d:\\get_stuff\\minesweeperproject\\minesweeper2\\minesweeper2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB094C2-16E8-4B09-8A75-E95CD0996C74}|MineSweeper2\\MineSweeper2.csproj|solutionrelative:minesweeper2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB094C2-16E8-4B09-8A75-E95CD0996C74}|MineSweeper2\\MineSweeper2.csproj|d:\\get_stuff\\minesweeperproject\\minesweeper2\\minesweeper2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0DB094C2-16E8-4B09-8A75-E95CD0996C74}|MineSweeper2\\MineSweeper2.csproj|solutionrelative:minesweeper2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB094C2-16E8-4B09-8A75-E95CD0996C74}|MineSweeper2\\MineSweeper2.csproj|d:\\get_stuff\\minesweeperproject\\minesweeper2\\minesweeper2\\buttoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB094C2-16E8-4B09-8A75-E95CD0996C74}|MineSweeper2\\MineSweeper2.csproj|solutionrelative:minesweeper2\\buttoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 426,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ButtonInfo.cs",
+              "DocumentMoniker": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\MineSweeper2\\ButtonInfo.cs",
+              "RelativeDocumentMoniker": "MineSweeper2\\ButtonInfo.cs",
+              "ToolTip": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\MineSweeper2\\ButtonInfo.cs",
+              "RelativeToolTip": "MineSweeper2\\ButtonInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T10:06:31.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\MineSweeper2\\Form1.cs",
+              "RelativeDocumentMoniker": "MineSweeper2\\Form1.cs",
+              "ToolTip": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\MineSweeper2\\Form1.cs",
+              "RelativeToolTip": "MineSweeper2\\Form1.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAcwEIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T09:51:02.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\MineSweeper2\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "MineSweeper2\\Form1.Designer.cs",
+              "ToolTip": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\MineSweeper2\\Form1.Designer.cs",
+              "RelativeToolTip": "MineSweeper2\\Form1.Designer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwFAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T09:50:42.523Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 140,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\MineSweeper2\\Form1.cs",
+              "RelativeDocumentMoniker": "MineSweeper2\\Form1.cs",
+              "ToolTip": "D:\\get_stuff\\MineSweeperProject\\MineSweeper2\\MineSweeper2\\Form1.cs [Design]",
+              "RelativeToolTip": "MineSweeper2\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T09:49:36.323Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
