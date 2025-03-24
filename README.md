@@ -43,7 +43,7 @@
 
 Once the game is running, you can:
 * Click tiles to reveal numbers or bombs
-* Use logic (or vibes) to mark bombs with flags
+* Use logic (or vibes, aka right click) to mark bombs with flags
 * Try not to explode
 
 <div align="center">
