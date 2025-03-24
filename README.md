@@ -28,6 +28,7 @@
 ### Prerequisites
 
 * No dependencies needed, just run the executable!
+* Oh, I think you do need .NET 9 though
 
 ### Installation
 
