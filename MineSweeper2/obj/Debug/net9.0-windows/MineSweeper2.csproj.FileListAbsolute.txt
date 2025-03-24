@@ -14,3 +14,4 @@ D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windo
 D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.pdb
 D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.genruntimeconfig.cache
 D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\ref\MineSweeper2.dll
+D:\get_stuff\MineSweeperProject\MineSweeper2\MineSweeper2\obj\Debug\net9.0-windows\MineSweeper2.sourcelink.json

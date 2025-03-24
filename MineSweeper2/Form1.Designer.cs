@@ -31,6 +31,7 @@
             welcomeLabel = new Label();
             numOfBombsLabel = new Label();
             bombsLabel = new Label();
+            restartButton = new Button();
             SuspendLayout();
             // 
             // welcomeLabel
@@ -44,9 +45,10 @@
             // 
             // numOfBombsLabel
             // 
+            numOfBombsLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             numOfBombsLabel.AutoSize = true;
             numOfBombsLabel.BorderStyle = BorderStyle.FixedSingle;
-            numOfBombsLabel.Location = new Point(348, 9);
+            numOfBombsLabel.Location = new Point(353, 9);
             numOfBombsLabel.Name = "numOfBombsLabel";
             numOfBombsLabel.Size = new Size(15, 17);
             numOfBombsLabel.TabIndex = 1;
@@ -54,18 +56,30 @@
             // 
             // bombsLabel
             // 
+            bombsLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             bombsLabel.AutoSize = true;
-            bombsLabel.Location = new Point(295, 9);
+            bombsLabel.Location = new Point(300, 9);
             bombsLabel.Name = "bombsLabel";
             bombsLabel.Size = new Size(47, 15);
             bombsLabel.TabIndex = 2;
             bombsLabel.Text = "Bombs:";
             // 
+            // restartButton
+            // 
+            restartButton.Location = new Point(196, 5);
+            restartButton.Name = "restartButton";
+            restartButton.Size = new Size(75, 23);
+            restartButton.TabIndex = 3;
+            restartButton.Text = "Restart";
+            restartButton.UseVisualStyleBackColor = true;
+            restartButton.Click += RestartButtonClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(375, 432);
+            ClientSize = new Size(380, 449);
+            Controls.Add(restartButton);
             Controls.Add(bombsLabel);
             Controls.Add(numOfBombsLabel);
             Controls.Add(welcomeLabel);
@@ -80,5 +94,6 @@
         private Label welcomeLabel;
         public Label numOfBombsLabel;
         private Label bombsLabel;
+        private Button restartButton;
     }
 }

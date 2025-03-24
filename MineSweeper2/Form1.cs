@@ -1,14 +1,17 @@
 using System;
+using static System.Windows.Forms.AxHost;
 
 namespace MineSweeper2
 {
     public partial class Form1 : Form
     {
-        private Button[,] buttons = new Button[9, 9]; 
-        private const int buttonSize = 40; 
+        private Button[,] buttons = new Button[9, 9];
+        private const int buttonSize = 40;
         private int numOfBombs = 6;
         private List<Point> bombPositions = new List<Point>();
         Random random = new Random();
+        private bool gameOver = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +28,12 @@ namespace MineSweeper2
 
         private void CreateGrid()
         {
+            int gridWidth = 9 * buttonSize;
+            int gridHeight = 9 * buttonSize;
+
+            // Calculate top-left starting position to center the grid
+            int startX = (this.ClientSize.Width - gridWidth) / 2;
+            int startY = (this.ClientSize.Height - gridHeight) / 2;
             for (int row = 0; row < 9; row++)
             {
                 for (int col = 0; col < 9; col++)
@@ -32,9 +41,10 @@ namespace MineSweeper2
                     Button btn = new Button
                     {
                         Size = new Size(buttonSize, buttonSize),
-                        Location = new Point(col * buttonSize, row * buttonSize + 40),
+                        Location = new Point(startX + col * buttonSize, startY + row * buttonSize),
                         Name = $"btn_{row}_{col}",
-                        Tag = new ButtonInfo(new Point(row, col), false)
+                        Tag = new ButtonInfo(new Point(row, col), false),
+                        BackColor = Color.White,
                     };
 
                     // Attach click event handler
@@ -42,7 +52,6 @@ namespace MineSweeper2
 
                     // Attach right-click event handler
                     btn.MouseDown += Button_MouseDown;
-
 
                     // Store button in array
                     buttons[row, col] = btn;
@@ -55,8 +64,8 @@ namespace MineSweeper2
             // Randomly place bombs
             while (bombPositions.Count < numOfBombs)
             {
-                int row = random.Next(0, 9);  
-                int col = random.Next(0, 9);  
+                int row = random.Next(0, 9);
+                int col = random.Next(0, 9);
                 Point position = new Point(row, col);
 
                 // Ensure the bomb position is unique
@@ -64,13 +73,15 @@ namespace MineSweeper2
                 {
                     bombPositions.Add(position);
                     ButtonInfo info = (ButtonInfo)buttons[row, col].Tag;
-                    info.HasBomb = true;  
+                    info.HasBomb = true;
                 }
             }
         }
 
         private void Button_Click(object sender, EventArgs e)
         {
+            if (gameOver) return;
+
             Button clickedButton = sender as Button;
 
             if (clickedButton != null && clickedButton.Tag is ButtonInfo info)
@@ -79,8 +90,11 @@ namespace MineSweeper2
                 if (info.HasBomb)
                 {
                     clickedButton.Text = "x";
+                    clickedButton.BackColor = Color.PaleVioletRed;
                     MessageBox.Show("Oof, you died");
-
+                    gameOver = true;
+                    RevealAllButtons();
+                    return;
                 }
                 else
                 {
@@ -88,6 +102,56 @@ namespace MineSweeper2
                 }
 
             }
+
+            if (!gameOver) 
+            {
+                CheckWin();
+            }
+        }
+
+        private void RevealAllButtons()
+        {
+            foreach (Button btn in buttons)
+            {
+                if (btn.Tag is ButtonInfo info)
+                {
+                    if (info.HasBomb)
+                    {
+                        btn.Text = "x"; // Show bomb
+                        btn.BackColor = Color.PaleVioletRed;
+                    }
+                    else
+                    {
+                        int bombCount = CountNeighborBombs(info.Position.X, info.Position.Y);
+                        btn.Text = bombCount > 0 ? bombCount.ToString() : "0";
+                        btn.BackColor = Color.LightGray;
+                    }
+                }
+            }
+        }
+        private int CountNeighborBombs(int row, int col)
+        {
+            int bombCount = 0;
+            int[] dX = { -1, -1, -1, 0, 0, 1, 1, 1 };
+            int[] dY = { -1, 0, 1, -1, 1, -1, 0, 1 };
+
+            for (int i = 0; i < 8; i++)
+            {
+                int newRow = row + dX[i];
+                int newCol = col + dY[i];
+
+                if (newRow >= 0 && newRow < 9 && newCol >= 0 && newCol < 9)
+                {
+                    Button neighborButton = buttons[newRow, newCol];
+
+                    if (neighborButton?.Tag is ButtonInfo neighborInfo && neighborInfo.HasBomb)
+                    {
+                        bombCount++;
+                    }
+                }
+            }
+
+            return bombCount;
         }
 
         private void Button_MouseDown(object sender, MouseEventArgs e)
@@ -97,9 +161,43 @@ namespace MineSweeper2
                 if (e.Button == MouseButtons.Right) // Check if right mouse button was clicked
                 {
                     clickedButton.Text = "X";
+                    clickedButton.BackColor = Color.PaleVioletRed;
                 }
             }
+            if (!gameOver)
+            {
+                CheckWin();
+            }
         }
+
+        private void CheckWin()
+        {
+            if (gameOver) return;
+            foreach (Button btn in buttons)
+            {
+                if (btn.Tag is ButtonInfo info)
+                {
+                    if (!info.HasBomb)
+                    {
+                        if (btn.BackColor != Color.LightGray)
+                        {
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        if (btn.BackColor != Color.PaleVioletRed)
+                        {
+                            return;
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show("yippee! you win!");
+        }
+
+
 
 
         private HashSet<Button> visitedButtons = new HashSet<Button>(); // Track visited buttons
@@ -139,6 +237,7 @@ namespace MineSweeper2
 
             // Update the clicked button's text
             clickedButton.Text = bombCount > 0 ? bombCount.ToString() : "0";
+            clickedButton.BackColor = Color.LightGray;
 
             // If no bombs nearby, reveal neighbors recursively
             if (bombCount == 0)
@@ -161,5 +260,10 @@ namespace MineSweeper2
             }
         }
 
+        private void RestartButtonClick(object sender, EventArgs e)
+        {
+            Application.Restart(); 
+            Environment.Exit(0);
+        }
     }
 }
